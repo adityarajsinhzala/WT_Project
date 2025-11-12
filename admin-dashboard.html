@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamesBay Admin Dashboard</title>
+    <link rel="stylesheet" href="./css/admin.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <h2>Games<span class="primary">Bay</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="admin-dashboard.html" class="active">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="admin-orders.html">
+                    <span class="material-icons-sharp">receipt_long</span>
+                    <h3>Orders</h3>
+                </a>
+                <a href="admin-products.html">
+                    <span class="material-icons-sharp">inventory</span>
+                    <h3>Products</h3>
+                </a>
+                <a href="admin-users.html">
+                    <span class="material-icons-sharp">bar_chart</span>
+                    <h3>Users</h3>
+                </a>
+                <a href="admin-promotions.html">
+                    <span class="material-icons-sharp">local_offer</span>
+                    <h3>Promotions</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">settings</span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+
+        <main>
+            <h1>Admin Dashboard</h1>
+
+            <div class="kpi-cards">
+                <div class="card">
+                    <span class="material-icons-sharp">paid</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Revenue</h3>
+                            <h1>$12,450.75</h1>
+                        </div>
+                        
+                    </div>
+                    <small class="text-muted">Last Month</small>
+                </div>
+                
+                <div class="card">
+                    <span class="material-icons-sharp">shopping_cart</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Orders Today</h3>
+                            <h1>32</h1>
+                        </div>
+                       
+                    </div>
+                    <small class="text-muted">Today</small>
+                </div>
+
+                <div class="card">
+                    <span class="material-icons-sharp">person_add</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>New Customers</h3>
+                            <h1>18</h1>
+                        </div>
+                         
+                    </div>
+                    <small class="text-muted">This Week</small>
+                </div>
+            </div>
+
+            <div class="recent-orders">
+                <h2>Recent Orders</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer Name</th>
+                            <th>Date</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#1054</td>
+                            <td>John Doe</td>
+                            <td>14 Sep 2025</td>
+                            <td>$59.99</td>
+                            <td class="warning">Processing</td>
+                        </tr>
+                        <tr>
+                            <td>#1053</td>
+                            <td>Jane Smith</td>
+                            <td>14 Sep 2025</td>
+                            <td>$29.99</td>
+                            <td class="success">Shipped</td>
+                        </tr>
+                         <tr>
+                            <td>#1052</td>
+                            <td>Alex Ray</td>
+                            <td>13 Sep 2025</td>
+                            <td>$89.98</td>
+                            <td class="success">Shipped</td>
+                        </tr>
+                         <tr>
+                            <td>#1051</td>
+                            <td>Mike Ross</td>
+                            <td>13 Sep 2025</td>
+                            <td>$45.00</td>
+                            <td class="danger">Cancelled</td>
+                        </tr>
+                         <tr>
+                            <td>#1050</td>
+                            <td>Sarah Lee</td>
+                            <td>12 Sep 2025</td>
+                            <td>$119.50</td>
+                            <td class="success">Shipped</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="#">Show All</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

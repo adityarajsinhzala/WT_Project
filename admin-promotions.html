@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Promotions</title>
+    <link rel="stylesheet" href="./css/admin.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <h2>Games<span class="primary">Bay</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="admin-dashboard.html" class="active">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="admin-orders.html">
+                    <span class="material-icons-sharp">receipt_long</span>
+                    <h3>Orders</h3>
+                </a>
+                <a href="admin-products.html">
+                    <span class="material-icons-sharp">inventory</span>
+                    <h3>Products</h3>
+                </a>
+                <a href="admin-users.html">
+                    <span class="material-icons-sharp">bar_chart</span>
+                    <h3>Users</h3>
+                </a>
+                <a href="admin-promotions.html">
+                    <span class="material-icons-sharp">local_offer</span>
+                    <h3>Promotions</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">settings</span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <main>
+            <h1>Promotions</h1>
+            
+            <div class="coupons">
+                <h2>Coupons</h2>
+                <table class="coupons-table">
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Discount</th>
+                            <th>Expiration Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>LAUNCH20</td>
+                            <td>20% Off</td>
+                            <td>12/31/2025</td>
+                            <td class="success">Active</td>
+                        </tr>
+                        <tr>
+                            <td>SUMMER10</td>
+                            <td>10% Off</td>
+                            <td>09/30/2025</td>
+                            <td class="success">Active</td>
+                        </tr>
+                        <tr>
+                            <td>NEWUSER5</td>
+                            <td>$5 Off</td>
+                            <td>10/15/2025</td>
+                            <td class="success">Active</td>
+                        </tr>
+                        <tr>
+                            <td>GAMESBAYVIP</td>
+                            <td>50% Off</td>
+                            <td>08/01/2025</td>
+                            <td class="danger">Expired</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="new-coupon-form">
+                <h2>Add New Coupon</h2>
+                <form>
+                    <label for="coupon-code">Coupon Code</label>
+                    <input type="text" id="coupon-code" name="coupon-code" required>
+
+                    <label for="discount-type">Discount Type</label>
+                    <select id="discount-type" name="discount-type">
+                        <option value="percentage">Percentage</option>
+                        <option value="fixed">Fixed Amount</option>
+                    </select>
+
+                    <label for="discount-value">Discount Value</label>
+                    <input type="number" id="discount-value" name="discount-value" required>
+
+                    <label for="expiration-date">Expiration Date</label>
+                    <input type="date" id="expiration-date" name="expiration-date" required>
+                    
+                    <button type="submit">Add Coupon</button>
+                </form>
+            </div>
+            
+            <div class="events">
+                <h2>Upcoming Sales Events</h2>
+                <table class="events-table">
+                    <thead>
+                        <tr>
+                            <th>Event Name</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Winter Sale</td>
+                            <td>12/01/2025</td>
+                            <td>12/31/2025</td>
+                            <td class="warning">Upcoming</td>
+                        </tr>
+                        <tr>
+                            <td>Black Friday</td>
+                            <td>11/28/2025</td>
+                            <td>11/30/2025</td>
+                            <td class="warning">Upcoming</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="new-event-form">
+                <h2>Add New Event</h2>
+                <form>
+                    <label for="event-name">Event Name</label>
+                    <input type="text" id="event-name" name="event-name" required>
+
+                    <label for="start-date">Start Date</label>
+                    <input type="date" id="start-date" name="start-date" required>
+
+                    <label for="end-date">End Date</label>
+                    <input type="date" id="end-date" name="end-date" required>
+                    
+                    <button type="submit">Add Event</button>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

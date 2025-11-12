@@ -1,0 +1,124 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Products</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="./css/admin.css">
+</head>
+
+<body>
+
+    <body>
+        <div class="container">
+            <aside>
+                <div class="top">
+                    <div class="logo">
+                        <h2>Games<span class="primary">Bay</span></h2>
+                    </div>
+                    <div class="close" id="close-btn">
+                        <span class="material-icons-sharp">close</span>
+                    </div>
+                </div>
+
+               <div class="sidebar">
+                <a href="admin-dashboard.html" class="active">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="admin-orders.html">
+                    <span class="material-icons-sharp">receipt_long</span>
+                    <h3>Orders</h3>
+                </a>
+                <a href="admin-products.html">
+                    <span class="material-icons-sharp">inventory</span>
+                    <h3>Products</h3>
+                </a>
+                <a href="admin-users.html">
+                    <span class="material-icons-sharp">bar_chart</span>
+                    <h3>Users</h3>
+                </a>
+                <a href="admin-promotions.html">
+                    <span class="material-icons-sharp">local_offer</span>
+                    <h3>Promotions</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">settings</span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+            </aside>
+            <main>
+                <h1>Products</h1>
+
+                <div class="add-product">
+                    <h2>Add New Product</h2>
+                    <input type="text" placeholder="Product Name">
+                    <input type="text" placeholder="Product Price">
+                    <textarea placeholder="Product Description"></textarea>
+                    <button>Add Product</button>
+                </div>
+
+                <div class="recent-products">
+                    <h2>Recent Products</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product ID</th>
+                                <th>Product Name</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#001</td>
+                                <td>Cyberpunk 2077</td>
+                                <td>RPG</td>
+                                <td>$59.99</td>
+                                <td class="success">In Stock</td>
+                            </tr>
+                            <tr>
+                                <td>#002</td>
+                                <td>The Witcher 3: Wild Hunt</td>
+                                <td>RPG</td>
+                                <td>$29.99</td>
+                                <td class="success">In Stock</td>
+                            </tr>
+                            <tr>
+                                <td>#003</td>
+                                <td>Red Dead Redemption 2</td>
+                                <td>Action</td>
+                                <td>$89.98</td>
+                                <td class="success">In Stock</td>
+                            </tr>
+                            <tr>
+                                <td>#004</td>
+                                <td>Elden Ring</td>
+                                <td>Action RPG</td>
+                                <td>$45.00</td>
+                                <td class="danger">Out of Stock</td>
+                            </tr>
+                            <tr>
+                                <td>#005</td>
+                                <td>Minecraft</td>
+                                <td>Sandbox</td>
+                                <td>$19.99</td>
+                                <td class="success">In Stock</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="#">Show All</a>
+                </div>
+            </main>
+        </div>
+    </body>
+</body>
+
+</html>

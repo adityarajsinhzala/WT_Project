@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Users</title>
+    <link rel="stylesheet" href="./css/admin.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <h2>Games<span class="primary">Bay</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+
+           <div class="sidebar">
+                <a href="admin-dashboard.html" class="active">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="admin-orders.html">
+                    <span class="material-icons-sharp">receipt_long</span>
+                    <h3>Orders</h3>
+                </a>
+                <a href="admin-products.html">
+                    <span class="material-icons-sharp">inventory</span>
+                    <h3>Products</h3>
+                </a>
+                <a href="admin-users.html">
+                    <span class="material-icons-sharp">bar_chart</span>
+                    <h3>Users</h3>
+                </a>
+                <a href="admin-promotions.html">
+                    <span class="material-icons-sharp">local_offer</span>
+                    <h3>Promotions</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">settings</span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <main>
+            <h1>Customers</h1>
+            
+            <div class="recent-users">
+                <h2>Recent Customers</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>User ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#1001</td>
+                            <td>John Doe</td>
+                            <td>john.doe@example.com</td>
+                            <td class="success">Active</td>
+                        </tr>
+                        <tr>
+                            <td>#1002</td>
+                            <td>Jane Smith</td>
+                            <td>jane.smith@example.com</td>
+                            <td class="success">Active</td>
+                        </tr>
+                         <tr>
+                            <td>#1003</td>
+                            <td>Peter Jones</td>
+                            <td>peter.j@example.com</td>
+                            <td class="success">Active</td>
+                        </tr>
+                         <tr>
+                            <td>#1004</td>
+                            <td>Anna Williams</td>
+                            <td>anna.w@example.com</td>
+                            <td class="danger">Inactive</td>
+                        </tr>
+                         <tr>
+                            <td>#1005</td>
+                            <td>Michael Brown</td>
+                            <td>michael.b@example.com</td>
+                            <td class="success">Active</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="#">Show All</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
