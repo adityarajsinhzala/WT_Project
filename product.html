@@ -2,7 +2,7 @@
 
 <head>
     <title>GamesBay</title>
-    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="/css/index.css" />
 </head>
 
 <body>
@@ -13,7 +13,8 @@
           <a href="home.html">Home </a>
           <a href="product.html">Products </a>
           <a href="contact.html">Contact </a>
-          <button id="cartbutton">Cart(3)</button>
+          <a id="cartbutton" href="cart.html">Cart</a>
+
         </ul>
       </nav>
     </header>
@@ -45,25 +46,25 @@
 
       <div class="cards">
         <div id="card">
-          <img src="image.png" alt="" />
+          <img src="p-controller.jpeg" alt="" />
+          <h2>Epic adventure Quest</h2>
+          <span>$35.99</span>
+          <button onclick="">Add to cart</button>
+        </div>
+        <div id="card">
+          <img src="p-monitor.webp" alt="" />
           <h2>Epic adventure Quest</h2>
           <span>$35.99</span>
           <button>Add to cart</button>
         </div>
         <div id="card">
-          <img src="image.png" alt="" />
+          <img src="p-mouse.png" alt="" />
           <h2>Epic adventure Quest</h2>
           <span>$35.99</span>
           <button>Add to cart</button>
         </div>
         <div id="card">
-          <img src="image.png" alt="" />
-          <h2>Epic adventure Quest</h2>
-          <span>$35.99</span>
-          <button>Add to cart</button>
-        </div>
-        <div id="card">
-          <img src="image.png" alt="" />
+          <img src="p-headphone.jpeg" alt="" />
           <h2>Epic adventure Quest</h2>
           <span>$35.99</span>
           <button>Add to cart</button>
@@ -94,7 +95,30 @@
             <a href="instagram.com">Instagram</a>
         </div>
         <p>© 2025 GamesBay. All rights reserved.</p>
-    </footer>
+      </footer>
 </body>
+<script>
+  const cartBtn = document.getElementById('cartbutton');
+let cart = [];
+
+cartBtn.textContent = `Cart(${cart.length})`;
+
+document.querySelectorAll('#card button').forEach(button => {
+  button.onclick = () => {
+    const card = button.parentElement;
+    const productName = card.querySelector('h2').textContent;
+    const productPrice = card.querySelector('span').textContent;
+    
+    cart.push({
+      name: productName,
+      price: productPrice,
+      image: card.querySelector('img').src
+    });
+    
+    cartBtn.textContent = `Cart(${cart.length})`;
+    alert(`${productName} has been added to your cart!`);
+  };
+});
+</script>
 
 </html>
