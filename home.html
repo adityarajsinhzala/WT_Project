@@ -12,7 +12,7 @@
           <a href="home.html">Home </a>
           <a href="product.html">Products </a>
           <a href="contact.html">Contact </a>
-          <button id="cartbutton">Cart(3)</button>
+          <a id="cartbutton" href="cart.html">Cart</a>
         </ul>
       </nav>
     </header>
@@ -26,7 +26,7 @@
       <button>Shop Now</button>
       </div>
       
-        <img src="image.png" alt="MainImage" />
+        <img src="p-pexels-photo-3165335.jpeg" alt="MainImage" />
       
     </main>
 
@@ -34,25 +34,25 @@
       <h1 class="break-title">Featured Games</h1>
       <div class="cards">
         <div id="card">
-          <img src="image.png" alt="" />
+          <img src="p-bf6.jpg" alt="" />
           <h2>Epic adventure Quest</h2>
           <span>$35.99</span>
           <button>Add to cart</button>
         </div>
         <div id="card">
-          <img src="image.png" alt="" />
+          <img src="p-gow.webp" alt="" />
           <h2>Epic adventure Quest</h2>
           <span>$35.99</span>
           <button>Add to cart</button>
         </div>
         <div id="card">
-          <img src="image.png" alt="" />
+          <img src="p-gta5.jpg" alt="" />
           <h2>Epic adventure Quest</h2>
           <span>$35.99</span>
           <button>Add to cart</button>
         </div>
         <div id="card">
-          <img src="image.png" alt="" />
+          <img src="p-rdr.png" alt="" />
           <h2>Epic adventure Quest</h2>
           <span>$35.99</span>
           <button>Add to cart</button>
@@ -69,20 +69,20 @@
         <h1 class="break-title">Shop by Category</h1>
         <div class="cards1">
           <div class="card2">
-            <img src="" alt="" />
+            <img src="p-controller.jpeg" alt="" />
             <h2>Controllers</h2>
           </div>
           <div class="card2">
-            <img src="" alt="" />
+            <img src="p-monitor.webp" alt="" />
+            <h2>Displays</h2>
+          </div>
+          <div class="card2">
+            <img src="p-mouse.png" alt="" />
+            <h2>Gaming accessories</h2>
+          </div>
+          <div class="card2">
+            <img src="p-headphone.jpeg" alt="" />
             <h2>Headsets</h2>
-          </div>
-          <div class="card2">
-            <img src="" alt="" />
-            <h2>Gaming Keyboards</h2>
-          </div>
-          <div class="card2">
-            <img src="" alt="" />
-            <h2>Consoles</h2>
           </div>
         </div>
       </main>
@@ -113,4 +113,27 @@
       <p>© 2025 GamesBay. All rights reserved.</p>
     </footer>
   </body>
+  <script>
+  const cartBtn = document.getElementById('cartbutton');
+let cart = [];
+
+cartBtn.textContent = `Cart(${cart.length})`;
+
+document.querySelectorAll('#card button').forEach(button => {
+  button.onclick = () => {
+    const card = button.parentElement;
+    const productName = card.querySelector('h2').textContent;
+    const productPrice = card.querySelector('span').textContent;
+    
+    cart.push({
+      name: productName,
+      price: productPrice,
+      image: card.querySelector('img').src
+    });
+    
+    cartBtn.textContent = `Cart(${cart.length})`;
+    alert(`${productName} has been added to your cart!`);
+  };
+});
+</script>
 </html>
